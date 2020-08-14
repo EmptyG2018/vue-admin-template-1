@@ -2,9 +2,9 @@ const app = {
   namespaced: true,
   state: {
     layout: {
-      layoutSpace: 48, //布局间距
+      layoutSpace: 20, //布局间距
       layoutInner: 1520, //布局安全宽度
-      headerHeight: 68, //头部宽度
+      headerHeight: 52, //头部宽度
       asideWidth: 256 //导航宽度
     }
   },

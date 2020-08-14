@@ -5,7 +5,7 @@ import { workLayout } from "@/layouts";
 //   render: h => h("router-view")
 // };
 
-const constantRouterMap = [
+export const constantRouterMap = [
   {
     path: "/login",
     name: "Login",
@@ -27,4 +27,15 @@ const constantRouterMap = [
   }
 ];
 
-export { constantRouterMap };
+export const constantErrorMap = [
+  {
+    path: "/404",
+    name: "Code404",
+    meta: { title: "404" },
+    component: () => import("@/views/error/404.vue")
+  },
+  {
+    path: "*",
+    redirect: "/404"
+  }
+]

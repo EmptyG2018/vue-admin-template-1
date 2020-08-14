@@ -1,8 +1,6 @@
 <template>
   <el-container class="layout-view" :style="viewStyle" :direction="direction">
-    <el-container class="layout-inner" :style="innerStyle"
-      ><slot
-    /></el-container>
+    <slot />
   </el-container>
 </template>
 
@@ -17,12 +15,10 @@ export default {
   computed: {
     ...mapGetters("app", ["layout"]),
     viewStyle() {
-      let layoutSpace = this.layout.layoutSpace;
-      return { padding: `${layoutSpace}px 0 ${layoutSpace}px` };
-    },
-    innerStyle() {
-      let layoutInner = this.layout.layoutInner;
-      return { width: `${layoutInner}px` };
+      let { headerHeight } = this.layout;
+      return {
+        height: `calc(100% - ${headerHeight}px)`
+      };
     }
   }
 };

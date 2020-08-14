@@ -2,8 +2,10 @@
   <layout-container>
     <layout-header></layout-header>
     <layout-view>
-      <layout-aside></layout-aside>
-      <layout-main></layout-main>
+      <el-container style="height: 100%;" direction="horizontal">
+        <layout-aside></layout-aside>
+        <layout-main></layout-main>
+      </el-container>
     </layout-view>
   </layout-container>
 </template>
