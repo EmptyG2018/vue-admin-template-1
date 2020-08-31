@@ -1,7 +1,9 @@
-import container from "./container";
+import window from "./window";
 import header from "./header";
 import view from "./view";
 import aside from "./aside";
 import main from "./main";
+import history from "./history";
+import content from "./content";
 
-export { container, header, view, aside, main };
+export { window, header, view, aside, main, history, content };

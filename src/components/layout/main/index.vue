@@ -1,5 +1,5 @@
 <template>
-  <el-main class="layout-main"><slot /></el-main>
+  <div class="layout-main"><slot /></div>
 </template>
 
 <style lang="less" scoped>

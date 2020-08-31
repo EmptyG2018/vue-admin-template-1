@@ -1,9 +1,5 @@
 <template>
-  <el-aside
-    class="layout-aside"
-    :style="asideStyle"
-    :width="`${layout.asideWidth}px`"
-  >
+  <el-aside class="layout-aside" :width="`${layout.asideWidth}px`">
     <el-menu
       class="menu-navigation"
       default-active="2"
@@ -72,11 +68,7 @@
 import { mapGetters } from "vuex";
 export default {
   computed: {
-    ...mapGetters("app", ["layout"]),
-    asideStyle() {
-      let { layoutSpace } = this.layout;
-      return { padding: `${layoutSpace}px 0` };
-    }
+    ...mapGetters("app", ["layout"])
   },
   methods: {
     handleOpen(key, keyPath) {

@@ -1,24 +1,34 @@
 <template>
-  <layout-container>
+  <layout-window>
     <layout-header></layout-header>
     <layout-view>
       <el-container style="height: 100%;" direction="horizontal">
         <layout-aside></layout-aside>
-        <layout-main></layout-main>
+        <layout-main>
+          <layout-history></layout-history>
+        </layout-main>
       </el-container>
     </layout-view>
-  </layout-container>
+  </layout-window>
 </template>
 
 <script>
-import { container, header, view, aside, main } from "@/components/layout";
+import {
+  window,
+  header,
+  view,
+  aside,
+  main,
+  history
+} from "@/components/layout";
 export default {
   components: {
-    layoutContainer: container,
+    layoutWindow: window,
     layoutHeader: header,
     layoutView: view,
     layoutAside: aside,
-    layoutMain: main
+    layoutMain: main,
+    layoutHistory: history
   }
 };
 </script>

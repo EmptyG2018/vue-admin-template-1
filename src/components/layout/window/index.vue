@@ -1,5 +1,5 @@
 <template>
-  <el-container class="layout-container" :direction="direction"
+  <el-container class="layout-window" :direction="direction"
     ><slot
   /></el-container>
 </template>
